@@ -73,7 +73,7 @@ create_vm_azure(){
 
 #vm镜像
 image_azure(){
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/Azure/image)`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/Azure/image)`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -92,7 +92,7 @@ image_azure(){
 
 #VM实例大小
 vmSize_azure(){
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/Azure/vmSize)`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/Azure/vmSize)`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -357,7 +357,7 @@ create_azure(){
 
 #azure选择位置
 location_azure(){
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/Azure/location)`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/Azure/location)`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -498,7 +498,7 @@ del_azure(){
 azure_menu() {
     clear
   echo && echo -e "Azure 云服务开机脚本${Red_font_prefix} 开源免费 无加密代码${Font_color_suffix} ${Green_font_prefix}from @openccloud${Font_color_suffix}
-项目地址：${Red_font_prefix}https://github.com/LG-leige/open_cloud${Font_color_suffix}
+项目地址：${Red_font_prefix}https://github.com/jasoduncan/open_cloud${Font_color_suffix}
  ${Green_font_prefix}1.${Font_color_suffix} 一键测活
  ${Green_font_prefix}2.${Font_color_suffix} 更换VM IP
  ${Green_font_prefix}3.${Font_color_suffix} 创建资源组(VM)
@@ -536,7 +536,7 @@ read -p " 请输入数字 :" num
     del_api_azure
     ;;
     98)
-    bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/opencloud.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/opencloud.sh)
     ;;
     99)
     exit 1

@@ -46,7 +46,7 @@ initialization(){
 start_menu() {
   clear
   echo && echo -e "云服务开机脚本${Red_font_prefix} 开源免费 无加密代码${Font_color_suffix} ${Green_font_prefix}from @openccloud${Font_color_suffix}
-项目地址：${Red_font_prefix}https://github.com/LG-leige/open_cloud${Font_color_suffix}
+项目地址：${Red_font_prefix}https://github.com/jasoduncan/open_cloud${Font_color_suffix}
  ${Green_font_prefix}1.${Font_color_suffix} Digitalocean 
  ${Green_font_prefix}2.${Font_color_suffix} Linode
  ${Green_font_prefix}3.${Font_color_suffix} vultr（未开发，没有API）
@@ -58,20 +58,20 @@ start_menu() {
 read -p " 请输入数字 :" num
   case "$num" in
     1)
-    bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/bash/opencloud-digitalocean.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/bash/opencloud-digitalocean.sh)
     ;;
     2)
-    bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/bash/opencloud-linode.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/bash/opencloud-linode.sh)
     ;;
     3)
     clear
     echo "目前该项目尚未开发，作者没有API" #vultr_menu
     ;;
     4)
-    bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/bash/opencloud-Azure.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/bash/opencloud-Azure.sh)
     ;;
     5)
-    bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/bash/opencloud-aws-ec2.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/bash/opencloud-aws-ec2.sh)
     ;;
     99)
     exit 1

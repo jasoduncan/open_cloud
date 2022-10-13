@@ -105,7 +105,7 @@ change_ip_aws_ec2(){
 #选择系统
 image_aws_ec2(){
     clear
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/aws/EC2/image/image)`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/aws/EC2/image/image)`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -119,7 +119,7 @@ image_aws_ec2(){
     id=`echo $json | jq -r '.opencloud['${b}'].id'`
     
     clear
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/aws/EC2/image/${region}/${id})`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/aws/EC2/image/${region}/${id})`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -208,7 +208,7 @@ sudo service sshd restart;
 #aws选择类型
 size_ec2_aws(){
     clear
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/aws/EC2/size/size)`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/aws/EC2/size/size)`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -222,7 +222,7 @@ size_ec2_aws(){
         id=`echo $json | jq -r '.opencloud['${b}'].id'`
     
     clear
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/aws/EC2/size/${id})`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/aws/EC2/size/${id})`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -297,7 +297,7 @@ get_vpcid_aws_EC2(){
 #aws选择区域
 region_ec2_aws(){
     clear
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/aws/EC2/region/region)`
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/aws/EC2/region/region)`
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -311,7 +311,7 @@ region_ec2_aws(){
         id=`echo $json | jq -r '.opencloud['${b}'].id'`
     
     clear
-    json=`cat <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/aws/EC2/region/${id}) `
+    json=`cat <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/aws/EC2/region/${id}) `
     o=`echo $json| jq ".opencloud | length"`
     
     i=-1
@@ -464,7 +464,7 @@ read -p " 请输入数字 :" num
 aws_EC2_menu() {
   clear
   echo && echo -e "AWS EC2 云服务开机脚本${Red_font_prefix} 开源免费 无加密代码${Font_color_suffix} ${Green_font_prefix}from @openccloud${Font_color_suffix}
-项目地址：${Red_font_prefix}https://github.com/LG-leige/open_cloud${Font_color_suffix}
+项目地址：${Red_font_prefix}https://github.com/jasoduncan/open_cloud${Font_color_suffix}
  ${Green_font_prefix}1.${Font_color_suffix} 一键全部API测活
  ${Green_font_prefix}2.${Font_color_suffix} 更换IP
  ${Green_font_prefix}3.${Font_color_suffix} 创建机器
@@ -506,7 +506,7 @@ read -p " 请输入数字 :" num
     del_api_aws_EC2
     ;;
     98)
-    bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/opencloud.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/opencloud.sh)
     ;;
     99)
     exit 1

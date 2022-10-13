@@ -27,7 +27,7 @@ apt-get install curl jq -y
 ```
 
 安装完成可以直接运行一下脚本（这个脚本会初始化，如果跳过他可能会报错）
-- ```bash <(curl -Ls https://raw.githubusercontent.com/LG-leige/open_cloud/main/opencloud.sh)```
+- ```bash <(curl -Ls https://raw.githubusercontent.com/jasoduncan/open_cloud/main/opencloud.sh)```
 
 ### 联系方式
 - [Teleagram通知频道](https://t.me/openccloud "@openccloud")
